@@ -24,20 +24,21 @@ let tasks = [
       titulo: "Beber água",
       tipo: 2
     }    
-  ]
+]
 
-tasks.sort(function (a, b) {
-    if (a.tipo < b.tipo) {
-        return -1
-    }
-    if (a.tipo > b.tipo) {
-        return 1
-    }
-})
-console.log(tasks)
+function ordenate() {
+    tasks.sort(function (a, b) {
+        if (a.tipo < b.tipo) {
+            return -1
+        }
+        if (a.tipo > b.tipo) {
+            return 1
+        }
+    })
+}
+ordenate()
 
 const listTasks = document.querySelector('.tasks-list')
-console.log(listTasks)
 
 function addItensToList (list) {
     // list.sort(comparaTipo(a, b))
@@ -50,7 +51,7 @@ function addItensToList (list) {
         const divRight = document.createElement('div')
         divRight.classList.add('right')
         iten.appendChild(divRight)
-
+        
         const colorType = document.createElement('p')
         if (list[i].tipo == 1) {
             colorType.classList.add('color-circle1')
@@ -64,15 +65,18 @@ function addItensToList (list) {
         text.classList.add('itens-text')
         text.innerText = list[i].titulo
         divRight.appendChild(text)
-
+        
         const divLeft = document.createElement('div')
         divLeft.classList.add('left')
         iten.appendChild(divLeft)
-
+        
         const buttonDelete = document.createElement('button')
         buttonDelete.classList.add('button-delete')
+        buttonDelete.id = `delete-${i}`
         divLeft.appendChild(buttonDelete)
         const itenImg = document.createElement('img')
+        itenImg.classList.add('remove')
+        itenImg.id = `remove-${i}`
         itenImg.src = 'img/trash.png'
         itenImg.alt = 'Lixeira'
         buttonDelete.appendChild(itenImg)
@@ -80,3 +84,42 @@ function addItensToList (list) {
 }
 
 addItensToList(tasks)
+
+const selectUrgency = document.querySelector('#urgency-of-tasks-id')
+const addInList = document.querySelector('.add-task')
+const inputTask = document.querySelector('#tasks-inserter-id')
+
+let obj = {}
+function recebeValores(inputTask, selectUrgency) {
+        obj = {
+            titulo: inputTask.value,
+            tipo: selectUrgency.value
+        }
+        return obj
+}
+let forPush = recebeValores(inputTask, selectUrgency)
+console.log(forPush)
+
+addInList.addEventListener('click', function() {
+    listTasks.innerHTML = ''
+    tasks.push(forPush)
+    ordenate()
+    addItensToList(tasks)
+})
+
+removeInList = document.querySelector('img')
+
+removeInList.addEventListener('click', function(e) {
+    let elementCapture = e.currentTarget.id
+    console.log(elementCapture)
+})
+
+
+
+
+
+
+
+
+
+

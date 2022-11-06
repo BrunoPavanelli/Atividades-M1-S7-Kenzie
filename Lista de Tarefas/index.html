@@ -30,7 +30,12 @@
                                 <input type="text" placeholder="Digite aqui sua tarefa" name="tasks-inserter" class="inputs" id="tasks-inserter-id">
                             </label>
                             <label for="type-chooser-id">
-                                <input type="text" placeholder="Selecione Tipo" name="type-chooser" class="inputs" id="type-chooser-id">
+                                <select class="inputs" placeholder="Selecione Tipo" name="urgency-of-tasks" id="urgency-of-tasks-id">
+                                    <option value="Selecione Tipo">Selecione Tipo</option>
+                                    <option value=1>Urgente</option>
+                                    <option value=2>Prioritário</option>
+                                    <option value=3>Nâo Prioritário</option>
+                                </select>
                             </label>
                         </form>
                         <button class="add-task">Adicionar Tarefa na Lista</button>
