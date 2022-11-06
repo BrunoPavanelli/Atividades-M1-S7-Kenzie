@@ -1,0 +1,174 @@
+/* Config Gerais */
+body {
+    background-color: white;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+/* Cabeçalho */
+.menu {
+    border-bottom: 2px solid rgba(237,237,237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    box-shadow: 2px 2px 5px 2px rgba(157, 164, 171, 0.781);
+}
+
+.page-header {
+    width: 65vw;
+    height: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.page-title {
+    color: rgba(69,99,221,255)
+}
+
+#searcher {
+    border: 2px solid rgba(241,243,245,255);
+    border-radius: 5px;
+    background-color: rgba(241,243,245,255);
+    height: 7vh;
+    width: 20vw;
+    color: rgba(157,164,171,255); 
+    padding: 10px;
+}
+
+/* Corpo */
+.main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 100px 0;
+}
+
+/* Config Gerais do Box das Seções */
+.box-geral {
+    width: 65vw;
+    /* height: 100%; */
+    border: 2px solid rgba(237,237,237,255);
+    border-radius: 10px;
+    background-color: rgba(238,238,238,255);
+    padding: 3px;
+}
+
+/* Seção de Inserir Novas Tarefas */
+.insert-task {
+    /* border: 2px solid black; */
+    height: 40vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px 2px rgba(157, 164, 171, 0.781);
+}
+
+.box-section {
+    /* border: 2px solid gray; */
+    width: 90%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputs {
+    border: 2px solid rgba(241,243,245,255);
+    border-radius: 5px;
+    background-color: rgba(241,243,245,255);
+    height: 7vh;
+    width: 27vw;
+    /* color: rgba(157,164,171,255);  */
+    padding: 10px;
+}
+
+.add-task {
+    background-color: rgba(69,99,221,255);
+    border-radius: 5px;
+    height: 7vh;
+    color: white;
+}
+
+/* Seção de Tarefas já Existentes */
+.tasks {
+    height: 80%;
+    padding: 40px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px 2px rgba(157, 164, 171, 0.781);
+}
+
+.box-section2 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tasks-list .list-itens {
+    background-color: rgba(241,243,245,255);
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+
+.color-circle1{
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    border: 2px solid rgba(245,135,55,255);
+    background-color: rgba(245,135,55,255);
+}
+
+.color-circle2{
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    border: 2px solid rgba(214,227,64,255);
+    background-color: rgba(214,227,64,255);
+}
+
+.color-circle3{
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    border: 2px solid rgba(119,232,100,255);
+    background-color: rgba(119,232,100,255);
+}
+

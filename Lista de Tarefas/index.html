@@ -5,11 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/estlilo.css">
 </head>
 <body>
-    
+    <nav class="menu">
+        <header class="page-header">
+            <h1 class="page-title">MY TASK'S</h1>   
+            <form action="">
+                <input type="text" placeholder="Pesquisar Tarefa" name="task-searcher" id="searcher">
+            </form>
+        </header>
+    </nav>
+
+        <main class="main-body">
+            <div class="box-geral">
+
+                <section class="insert-task">
+                    <div class="box-section">
+                    <h1 class="section-title">Inserir Tarefa</h1>
+                        <form class="box-form" action="">
+                            <label for="tasks-inserter-id">
+                                <input type="text" placeholder="Digite aqui sua tarefa" name="tasks-inserter" class="inputs" id="tasks-inserter-id">
+                            </label>
+                            <label for="type-chooser-id">
+                                <input type="text" placeholder="Selecione Tipo" name="type-chooser" class="inputs" id="type-chooser-id">
+                            </label>
+                        </form>
+                        <button class="add-task">Adicionar Tarefa na Lista</button>
+                    </div>
+                </section>
+
+                <section class="tasks">
+                    <div class="box-section2">
+                        <h1>Tarefas</h1>
+                        <ul class="tasks-list">
+                            
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
 </body>
 </html>
