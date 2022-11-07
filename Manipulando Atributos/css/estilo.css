@@ -1,0 +1,43 @@
+body {
+    background-color: #303e73;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.box-main {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.box-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 40vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-color-adminAdmin {
+    background-color: #748ffc;
+}
+
+.card-color-user {
+    background-color: #63e6be;
+}
+
+.card-color-admin {
+   background-color: #ffe066; 
+}
