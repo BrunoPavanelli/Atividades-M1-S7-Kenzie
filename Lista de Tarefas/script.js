@@ -88,23 +88,34 @@ addItensToList(tasks)
 const selectUrgency = document.querySelector('#urgency-of-tasks-id')
 const addInList = document.querySelector('.add-task')
 const inputTask = document.querySelector('#tasks-inserter-id')
+let form = document.querySelector('.box-form')
 
 let obj = {}
 function recebeValores(inputTask, selectUrgency) {
+    if (inputTask.tasks == '' || selectUrgency == 'Selecione Tipo') {
+        alert('Campo Vazio')
+        return false
+    } else {
         obj = {
             titulo: inputTask.value,
             tipo: selectUrgency.value
         }
+        tasks.push(obj)
         return obj
+    }
 }
-let forPush = recebeValores(inputTask, selectUrgency)
-console.log(forPush)
 
-addInList.addEventListener('click', function() {
-    listTasks.innerHTML = ''
-    tasks.push(forPush)
-    ordenate()
-    addItensToList(tasks)
+addInList.addEventListener('click', function(e) {
+    // recebeValores(inputTask, selectUrgency)
+    let forAlert = recebeValores(inputTask, selectUrgency)
+    if (forAlert.titulo == ''){
+        alert('Campo Vazio')
+    } else {
+        ordenate()
+        listTasks.innerHTML = ''
+        addItensToList(tasks)
+        e.stopPropagation()
+    }
 })
 
 removeInList = document.querySelector('img')
