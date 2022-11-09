@@ -118,12 +118,40 @@ addInList.addEventListener('click', function(e) {
     }
 })
 
-removeInList = document.querySelector('img')
-
-removeInList.addEventListener('click', function(e) {
-    let elementCapture = e.currentTarget.id
-    console.log(elementCapture)
+const search = document.querySelector("#searcher")
+function recebeString(search) {
+    console.log(search.value)
+}
+search.addEventListener("keypress", function(e){
+    if (e.key === 'Enter') {
+        console.log('estou on')
+        // recebeString(search)
+    }
 })
+// function searchTask(search, list) {
+//     let searchRes = []
+//     for (let i = 0; i < list.length; i++) {
+//         if (search.value.toLowerCase() == list[i].titulo.toLowerCase()) {
+//             console.log(list[i])
+//             searchRes.push(list[i])
+//         }
+//     }
+//     if (searchRes.length == 0) {
+//         return alert('Tarefa não encontrada')
+//     } else {
+//         // console.log(searchRes)
+//         return searchRes
+//     }
+// }
+
+// search.addEventListener('keypress', function(e){
+//     if (e.key === 'Enter') {
+//         let aux = searchTask(search, tasks)
+//         listTasks.innerHTML = ''
+//         addItensToList(aux)
+//         e.stopPropagation()
+//     }
+// })
 
 
 

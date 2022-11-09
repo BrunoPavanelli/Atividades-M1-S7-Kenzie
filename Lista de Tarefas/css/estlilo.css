@@ -37,6 +37,10 @@ body {
     width: 20vw;
     color: rgba(157,164,171,255); 
     padding: 10px;
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 24px;
 }
 
 /* Corpo */
