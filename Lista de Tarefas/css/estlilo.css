@@ -29,18 +29,33 @@ body {
     color: rgba(69,99,221,255)
 }
 
-#searcher {
+.box-search{
     border: 2px solid rgba(241,243,245,255);
     border-radius: 5px;
     background-color: rgba(241,243,245,255);
     height: 7vh;
     width: 20vw;
     color: rgba(157,164,171,255); 
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#searcher {
+    border: 2px solid rgba(241,243,245,255);
+    border-radius: 5px;
+    background-color: rgba(241,243,245,255);
+    color: rgba(157,164,171,255); 
+}
+
+#botao-search {
+    height: 4.5vh;
+    width: 14%;
     background-image: url(../img/lupa.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 24px;
+    background-color: rgba(241,243,245,255);    
 }
 
 /* Corpo */
@@ -102,6 +117,14 @@ body {
     border-radius: 5px;
     height: 7vh;
     color: white;
+}
+
+.add-task-toggle {
+    background-color: rgba(69,99,221,255);
+    border-radius: 5px;
+    height: 7vh;
+    color: white;
+    border: 2px solid black;
 }
 
 /* Seção de Tarefas já Existentes */

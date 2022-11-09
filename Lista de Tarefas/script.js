@@ -92,7 +92,7 @@ let form = document.querySelector('.box-form')
 
 let obj = {}
 function recebeValores(inputTask, selectUrgency) {
-    if (inputTask.tasks == '' || selectUrgency == 'Selecione Tipo') {
+    if (inputTask.value == '' || selectUrgency.value == 'Selecione Tipo') {
         alert('Campo Vazio')
         return false
     } else {
@@ -105,8 +105,7 @@ function recebeValores(inputTask, selectUrgency) {
     }
 }
 
-addInList.addEventListener('click', function(e) {
-    // recebeValores(inputTask, selectUrgency)
+addInList.addEventListener('click', function() {
     let forAlert = recebeValores(inputTask, selectUrgency)
     if (forAlert.titulo == ''){
         alert('Campo Vazio')
@@ -114,44 +113,33 @@ addInList.addEventListener('click', function(e) {
         ordenate()
         listTasks.innerHTML = ''
         addItensToList(tasks)
-        e.stopPropagation()
     }
 })
 
-const search = document.querySelector("#searcher")
+const search = document.getElementById("searcher")
+const buttonSearch = document.querySelector('#botao-search')
+
 function recebeString(search) {
-    console.log(search.value)
-}
-search.addEventListener("keypress", function(e){
-    if (e.key === 'Enter') {
-        console.log('estou on')
-        // recebeString(search)
+    let aux
+    let newTasks = []
+    let value = search.value.toLowerCase()
+    for (let i = 0; i < tasks.length; i++) {
+        tasksValue = tasks[i].titulo.toLowerCase() 
+        if (value == tasksValue) {
+            aux = tasks[i]
+            listTasks.innerHTML = '' 
+            newTasks.push(aux)
+        }
     }
-})
-// function searchTask(search, list) {
-//     let searchRes = []
-//     for (let i = 0; i < list.length; i++) {
-//         if (search.value.toLowerCase() == list[i].titulo.toLowerCase()) {
-//             console.log(list[i])
-//             searchRes.push(list[i])
-//         }
-//     }
-//     if (searchRes.length == 0) {
-//         return alert('Tarefa não encontrada')
-//     } else {
-//         // console.log(searchRes)
-//         return searchRes
-//     }
-// }
+    return newTasks
+}
 
-// search.addEventListener('keypress', function(e){
-//     if (e.key === 'Enter') {
-//         let aux = searchTask(search, tasks)
-//         listTasks.innerHTML = ''
-//         addItensToList(aux)
-//         e.stopPropagation()
-//     }
-// })
+buttonSearch.addEventListener("click", function(){
+    let aux = recebeString(search)
+    addItensToList(aux)   
+})
+
+
 
 
 

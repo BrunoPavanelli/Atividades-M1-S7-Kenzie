@@ -12,12 +12,15 @@
 <body>
     <nav class="menu">
         <header class="page-header">
-            <h1 class="page-title">MY TASK'S</h1>   
-            <form action="">
-                <label for="searcher">
-                    <input type="text" placeholder="Pesquisar Tarefa" name="task-searcher" id="searcher">
-                </label>
-            </form>
+            <h1 class="page-title">MY TASK'S</h1>
+            <div class="box-search"> 
+                <form action="" id="form-search">
+                    <label for="searcher">
+                        <input type="text" placeholder="Pesquisar Tarefa" name="task-searcher" id="searcher" required>
+                    </label>
+                </form>
+                <button id="botao-search"></button>
+            </div> 
         </header>
     </nav>
 
@@ -32,7 +35,7 @@
                                 <input type="text" placeholder="Digite aqui sua tarefa" name="tasks-inserter" class="inputs" id="tasks-inserter-id" required="required">
                             </label>
                             <label for="type-chooser-id">
-                                <select class="inputs" placeholder="Selecione Tipo" name="urgency-of-tasks" id="urgency-of-tasks-id" >
+                                <select class="inputs" placeholder="Selecione Tipo" name="urgency-of-tasks" id="urgency-of-tasks-id" required>
                                     <option value="Selecione Tipo">Selecione Tipo</option>
                                     <option value=1>Urgente</option>
                                     <option value=2>Prioritário</option>
