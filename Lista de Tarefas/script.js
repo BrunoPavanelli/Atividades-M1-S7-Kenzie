@@ -74,12 +74,6 @@ function addItensToList (list) {
         buttonDelete.classList.add('button-delete')
         buttonDelete.id = `delete-${i}`
         divLeft.appendChild(buttonDelete)
-        const itenImg = document.createElement('img')
-        itenImg.classList.add('remove')
-        itenImg.id = `remove-${i}`
-        itenImg.src = 'img/trash.png'
-        itenImg.alt = 'Lixeira'
-        buttonDelete.appendChild(itenImg)
     }
 }
 
@@ -138,6 +132,8 @@ buttonSearch.addEventListener("click", function(){
     let aux = recebeString(search)
     addItensToList(aux)   
 })
+
+
 
 
 
