@@ -24,7 +24,7 @@ function createRemoveButton() {
     const removeButton = document.createElement('button')
     removeButton.innerText = 'Remove'
     removeButton.addEventListener('click', (e) => {
-        list = list.filter((_, i) => i !== Number(e.composedPath[1].id))
+        list = list.filter((_, i) => i !== Number(e.composedPath()[1].id))
         reloadList()
     })
     return removeButton
@@ -55,4 +55,5 @@ function onCLickResetFunction() {
     list = []
 }
 resetButton.addEventListener('click', onCLickResetFunction)
+
 
