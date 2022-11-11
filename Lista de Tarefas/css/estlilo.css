@@ -7,12 +7,14 @@ body {
 
 /* Cabeçalho */
 .menu {
+    height: 10vh;
+    width: 100%;
     border-bottom: 2px solid rgba(237,237,237);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
     box-shadow: 2px 2px 5px 2px rgba(157, 164, 171, 0.781);
+
 }
 
 .page-header {
@@ -23,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    /* position: fixed; */
 }
 
 .page-title {
@@ -69,7 +72,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0 100px 0;
+    margin: 0 0 100px 0;
+
+
 }
 
 /* Config Gerais do Box das Seções */
@@ -80,6 +85,7 @@ body {
     border-radius: 10px;
     background-color: rgba(238,238,238,255);
     padding: 3px;
+    margin: 20vh;
 }
 
 /* Seção de Inserir Novas Tarefas */

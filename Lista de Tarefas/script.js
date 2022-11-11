@@ -41,11 +41,10 @@ ordenate()
 const listTasks = document.querySelector('.tasks-list')
 
 function addItensToList (list) {
-    // list.sort(comparaTipo(a, b))
-
     for (let i = 0; i < list.length; i++) {
         const iten = document.createElement('li')
         iten.classList.add('list-itens')
+        iten.id = `list-${i}`
         listTasks.appendChild(iten)
 
         const divRight = document.createElement('div')
@@ -73,6 +72,20 @@ function addItensToList (list) {
         const buttonDelete = document.createElement('button')
         buttonDelete.classList.add('button-delete')
         buttonDelete.id = `delete-${i}`
+
+        buttonDelete.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const find = tasks.find( (element) => {
+                if (element.titulo === list[i].titulo) {
+                    list.splice(i,1)
+                    return(list)
+                }                  
+            })            
+            listTasks.innerHTML = ''
+            addItensToList(tasks)
+        })
+        
         divLeft.appendChild(buttonDelete)
     }
 }
@@ -99,7 +112,8 @@ function recebeValores(inputTask, selectUrgency) {
     }
 }
 
-addInList.addEventListener('click', function() {
+addInList.addEventListener('click', function(e) {
+    // e.preventDefault()
     let forAlert = recebeValores(inputTask, selectUrgency)
     if (forAlert.titulo == ''){
         alert('Campo Vazio')
@@ -123,15 +137,23 @@ function recebeString(search) {
             aux = tasks[i]
             listTasks.innerHTML = '' 
             newTasks.push(aux)
+            return newTasks
+        } else {
+            aux = {titulo: 'Nenhuma tarefa encontrada'}
+            listTasks.innerHTML = '' 
         }
     }
+    newTasks.push(aux)
+    console.log(newTasks)
     return newTasks
 }
 
-buttonSearch.addEventListener("click", function(){
+buttonSearch.addEventListener("click", function(e){
+    e.preventDefault()
     let aux = recebeString(search)
     addItensToList(aux)   
 })
+
 
 
 
