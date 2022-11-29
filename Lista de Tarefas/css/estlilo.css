@@ -60,7 +60,8 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     background-size: 20px;
-    background-color: rgba(241,243,245,255);    
+    background-color: rgba(241,243,245,255);  
+    cursor: pointer;
 }
 
 #botao-search:active {
